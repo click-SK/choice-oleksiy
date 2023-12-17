@@ -497,12 +497,26 @@ body {
 }
 
 .availability_service_repair_box_left_text {
-  text-align: right;
+  margin-left: auto;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 0 7px;
   color: #101010;
   font-size: 14px;
   font-weight: 500;
   line-height: 115%;
   text-transform: uppercase;
+}
+.availability_service_repair_box_left_text::after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url("../image/arrow-black.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .availability_service_repair_box_right {
   display: flex;
@@ -538,12 +552,26 @@ body {
 }
 
 .availability_service_repair_box_right_text {
-  text-align: right;
-  color: var(--GREEN, #53c855);
+  margin-left: auto;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 0 7px;
+  color: var(--GREEN-4, #71e873);
   font-size: 14px;
   font-weight: 500;
   line-height: 115%;
   text-transform: uppercase;
+}
+.availability_service_repair_box_right_text::after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url("../image/arrow-green.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .availability_service_wrapp {
