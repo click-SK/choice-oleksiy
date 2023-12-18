@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/swiper.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,28 +17,30 @@
   </head>
   <body>
     <header class="header">
-      <a href="#"><img src="image/logo.svg" alt="logo" /></a>
+      <a href="/"><img src="image/logo.svg" alt="logo" /></a>
       <nav class="nav">
         <ul class="header_list">
           <li class="header_item">
-            <a class="header_link" href="#">Usługi & Cennik</a>
+            <a class="header_link" href="#hero">Usługi & Cennik</a>
           </li>
           <li class="header_item">
-            <a class="header_link" href="#">Serwis mobilny</a>
-          </li>
-          <li class="header_item"><a class="header_link" href="#">O nas</a></li>
-          <li class="header_item">
-            <a class="header_link" href="#">Jak zlecić</a>
+            <a class="header_link" href="#service">Serwis mobilny</a>
           </li>
           <li class="header_item">
-            <a class="header_link" href="#">Kontakt</a>
+            <a class="header_link" href="#about">O nas</a>
+          </li>
+          <li class="header_item">
+            <a class="header_link" href="#availability">Jak zlecić</a>
+          </li>
+          <li class="header_item">
+            <a class="header_link" href="#contacts">Kontakt</a>
           </li>
         </ul>
       </nav>
       <a class="header_tel" href="#">+48 514 ***<span>pokaż numer</span></a>
     </header>
     <main>
-      <section class="section_hero">
+      <section id="hero" class="section_hero">
         <div class="container">
           <div class="hero_wrapp">
             <p class="hero_schedule">
@@ -82,7 +85,12 @@
                   src="./image/flag.svg"
                   alt="poland flag"
                 />
-                <input class="hero_tel_county_input" type="tel" value="+48" />
+                <input
+                  class="hero_tel_county_input"
+                  type="tel"
+                  value="+48"
+                  disabled
+                />
                 <input class="hero_tel_input" type="tel" value="786 000 000" />
               </div>
 
@@ -90,14 +98,42 @@
                 Zamówić i otrzymać rabat 5%
               </button>
             </div>
-            <p class="hero_percentage_text">
-              * 80% napraw wykonujemy w ciągu 1 godziny. Kolejne 18,5% - w ciągu
-              doby. Zachowując przy tym najwyższe standardy jakości.
-            </p>
+            <div class="hero_swiper_wrapp">
+              <div class="swiper-hero">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="hero_slider_card">
+                      <p class="hero_percentage_text">
+                        * 80% napraw wykonujemy w ciągu 1 godziny. Kolejne 18,5%
+                        - w ciągu doby. Zachowując przy tym najwyższe standardy
+                        jakości.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="hero_slider_card">
+                      <p class="hero_percentage_text">
+                        Oryginalne lub wysokiej jakości  części zamienne z
+                        najlepszą gwarancją w Warszawie do 24 miesięcy
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="hero_slider_card">
+                      <p class="hero_percentage_text">
+                        Bezpłatna diagnoza nawet w przypadku rezygnacji z
+                        naprawy
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
           </div>
         </div>
       </section>
-      <section class="section_apple_service">
+      <section id="service" class="section_apple_service">
         <div class="container">
           <p class="apple_service_description">
             Twój Choice – przyjazny i profesjonalny serwis Apple w Warszawie.
@@ -117,27 +153,177 @@
               na podstawie 233+ prawdziwych opinii
             </p>
           </div>
+
           <div class="apple_service_slider_wrapp">
-            <div class="apple_service_slider_card">
-              <img src="./image/slide1.png" alt="review" />
-            </div>
-            <div class="apple_service_slider_card">
-              <img src="./image/slide2.png" alt="review" />
-            </div>
-            <div class="apple_service_slider_card">
-              <img src="./image/slide3.png" alt="review" />
-            </div>
-            <div class="apple_service_slider_card">
-              <img src="./image/slide4.png" alt="review" />
-            </div>
-            <div class="apple_service_slider_card">
-              <img src="./image/slide5.png" alt="review" />
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="apple_service_slider_card">
+                    <div class="apple_service_slider_card_wrapp">
+                      <div class="apple_service_slider_card_circle">B</div>
+                      <div class="apple_service_slider_card_box">
+                        <p class="apple_service_slider_card_name">
+                          Barbara Pawlowska
+                        </p>
+                        <p class="apple_service_slider_card_text">32 отзыва</p>
+                      </div>
+                    </div>
+                    <div class="apple_service_slider_card_block">
+                      <div class="apple_service_slider_card_icon">
+                        <img src="./image//star.svg" alt="star" />
+                        <img src="./image//star.svg" alt="star" />
+                        <img src="./image//star.svg" alt="star" />
+                        <img src="./image//star.svg" alt="star" />
+                        <img src="./image//star.svg" alt="star" />
+                      </div>
+                      <p class="apple_service_slider_card_text">Вчера</p>
+                      <p class="apple_service_slider_card_item">Новый</p>
+                    </div>
+                    <p class="apple_service_slider_card_reviews">
+                      Bardzo miło, sprawnie i profesjonalnie. Polecam serdecznie
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="apple_service_slider_card">
+                    <div class="apple_service_slider_card_wrapp">
+                      <div class="apple_service_slider_card_circle">P</div>
+                      <div class="apple_service_slider_card_box">
+                        <p class="apple_service_slider_card_name">Piotr N</p>
+                        <p class="apple_service_slider_card_text">
+                          Местный эксперт 73 отзыва 1 фото
+                        </p>
+                      </div>
+                    </div>
+                    <div class="apple_service_slider_card_block">
+                      <div class="apple_service_slider_card_icon">
+                        <img src="./image//star.svg" alt="star" />
+                        <img src="./image//star.svg" alt="star" />
+                        <img src="./image//star.svg" alt="star" />
+                        <img src="./image//star.svg" alt="star" />
+                        <img src="./image//star.svg" alt="star" />
+                      </div>
+                      <p class="apple_service_slider_card_text">Неделю назад</p>
+                      <p class="apple_service_slider_card_item">Новый</p>
+                    </div>
+                    <p class="apple_service_slider_card_reviews">
+                      Super serwis. Nie było szybko, ale mega skutecznie
+                      iphone12 pro miał zwarcie, inny serwis kombinował a tutaj
+                      pico bello, namierzenie usterki było skomplikowane ale
+                      naprawa wykonana bardzo skutecznie ok m-c temu iphonik
+                      śmiga jak należy.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="apple_service_slider_card">
+                    <div class="apple_service_slider_card_wrapp">
+                      <div class="apple_service_slider_card_circle">K</div>
+                      <div class="apple_service_slider_card_box">
+                        <p class="apple_service_slider_card_name">
+                          Карина Клечковская
+                        </p>
+                        <p class="apple_service_slider_card_text">1 отзыв</p>
+                      </div>
+                    </div>
+                    <div class="apple_service_slider_card_block">
+                      <div class="apple_service_slider_card_icon">
+                        <img src="./image//star.svg" alt="star" />
+                        <img src="./image//star.svg" alt="star" />
+                        <img src="./image//star.svg" alt="star" />
+                        <img src="./image//star.svg" alt="star" />
+                        <img src="./image//star.svg" alt="star" />
+                      </div>
+                      <p class="apple_service_slider_card_text">Неделю назад</p>
+                      <p class="apple_service_slider_card_item">Новый</p>
+                    </div>
+                    <p class="apple_service_slider_card_reviews">
+                      Очень быстрый и профессиональный сервис, самые низкие
+                      рекомендации. Меняла экран на телефоне - все сделано очень
+                      качественно , невероятно быстро и по очень приятной цене .
+                      А ещё , что немаловажно , была предоставлена гарантия . Я
+                      рекомендую это место людям , которые ищут место с
+                      компетентными специалистами и вежливым персоналом (очень
+                      приятная и дружелюбная девушка - администратор ). Просто
+                      10 из 10
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="apple_service_slider_card">
+                    <div class="apple_service_slider_card_wrapp">
+                      <div class="apple_service_slider_card_circle">R</div>
+                      <div class="apple_service_slider_card_box">
+                        <p class="apple_service_slider_card_name">
+                          Rafał Gałązka
+                        </p>
+                        <p class="apple_service_slider_card_text">
+                          Местный эксперт 12 отзывов 10 фото
+                        </p>
+                      </div>
+                    </div>
+                    <div class="apple_service_slider_card_block">
+                      <div class="apple_service_slider_card_icon">
+                        <img src="./image//star.svg" alt="star" />
+                        <img src="./image//star.svg" alt="star" />
+                        <img src="./image//star.svg" alt="star" />
+                        <img src="./image//star.svg" alt="star" />
+                        <img src="./image//star.svg" alt="star" />
+                      </div>
+                      <p class="apple_service_slider_card_text">
+                        2 месяца назад
+                      </p>
+                    </div>
+                    <p class="apple_service_slider_card_reviews">
+                      Bardzo miła obsługa szybka i profesjonalna robota polecam
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="apple_service_slider_card">
+                    <div class="apple_service_slider_card_wrapp">
+                      <div class="apple_service_slider_card_circle">L</div>
+                      <div class="apple_service_slider_card_box">
+                        <p class="apple_service_slider_card_name">
+                          Leonid Lavrus
+                        </p>
+                        <p class="apple_service_slider_card_text">
+                          Местный эксперт 50 отзывов 129 фото
+                        </p>
+                      </div>
+                    </div>
+                    <div class="apple_service_slider_card_block">
+                      <div class="apple_service_slider_card_icon">
+                        <img src="./image//star.svg" alt="star" />
+                        <img src="./image//star.svg" alt="star" />
+                        <img src="./image//star.svg" alt="star" />
+                        <img src="./image//star.svg" alt="star" />
+                        <img src="./image//star.svg" alt="star" />
+                      </div>
+                      <p class="apple_service_slider_card_text">Месяц назад</p>
+                    </div>
+                    <p class="apple_service_slider_card_reviews">
+                      Звертався з легким ремонтом, переплавка і поклей макбук.
+                      Молодий негативний відгук і швидкий сервіс, запропонував
+                      фото всередині перед початком ремонту. За'ясувалася цінка,
+                      скинули фото і запропонували продовжити. Через 3 години
+                      ноутбук був готовий. Згодом виявилася деятий дюймов не
+                      робочим певно абия з транспортної після заміни дисплея в
+                      майстерню поряд. Пояснили, що трогати зробити не можуть
+                      через виробництва деталей якщо отримаю телефон абия
+                      спрацюється. За 3 рядкове описання, а переказ бачив
+                      завдання ремонт робить швидко, тихо середно.. Складаний
+                      ремонт роблять самі. Дуже дякую! Рекомендую!
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <p class="apple_service_client_text">Ponad 20000 Klientów za 5 lat</p>
       </section>
-      <section class="section_popular_services">
+      <section id="about" class="section_popular_services">
         <div class="container">
           <h2 class="popular_services_title">Popularne usługi</h2>
           <div class="popular_services_table">
@@ -278,6 +464,7 @@
               </div>
             </div>
           </div>
+
           <div class="popular_services_request_wrapp">
             <img
               class="popular_services_request_fox"
@@ -297,7 +484,7 @@
           </div>
         </div>
       </section>
-      <section class="section_availability_service">
+      <section id="availability" class="section_availability_service">
         <div class="container">
           <h2 class="availability_service_repair_title">
             W salonie, kurierem lub z dojazdem – bez kłopotów, codziennie 7 dni
@@ -390,7 +577,7 @@
           </div>
         </div>
       </section>
-      <section class="section_repair_options">
+      <section id="contacts" class="section_repair_options">
         <div class="container">
           <h2 class="repair_options_title">Wybierz opcje naprawy</h2>
           <div class="repair_options_wrapp">
@@ -527,6 +714,7 @@
                   class="repair_options_input_county"
                   type="tel"
                   value="+48"
+                  disabled
                 />
                 <input
                   class="repair_options_input_tel"
@@ -563,12 +751,22 @@
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
+            gestureHandling="none"
           ></iframe>
+          <div class="map_block">
+            <img src="./image/googlemaps.png" alt="googlemaps" />
+            <div class="map_box">
+              <p class="map_adress">Aleja Solidarności 95/99</p>
+              <p class="map_text">Zaplanuj trasę</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
     <footer class="footer">
       <p class="footer_text">2023 © Choice.app - All rights reserved</p>
     </footer>
+    <script src="./js/swiper.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
