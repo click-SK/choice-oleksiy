@@ -13,7 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>Сhoice</title>
   </head>
   <body>
     <header class="header">
@@ -682,7 +682,7 @@
                 </p>
               </li>
             </ul>
-            <div class="repair_options_input_wrapp">
+            <!-- <div class="repair_options_input_wrapp">
               <div class="repair_options_input_box">
                 <input
                   class="repair_options_input"
@@ -731,7 +731,60 @@
               <div class="repair_options_input_box">
                 <button class="repair_options_btn" type="button">wyślj</button>
               </div>
-            </div>
+            </div> -->
+            <form action="sendmail.php" method="post">
+              <div class="repair_options_input_wrapp">
+                  <div class="repair_options_input_box">
+                      <input
+                          class="repair_options_input"
+                          type="text"
+                          name="deviceType"
+                          placeholder="Rodzaj urządzenia" />
+                      <p class="repair_options_input_text">Przykład: iPhone</p>
+                  </div>
+                  <div class="repair_options_input_box">
+                      <input
+                          class="repair_options_input"
+                          type="text"
+                          name="model"
+                          placeholder="Model" />
+                      <p class="repair_options_input_text">Przykład: iPhone 13 Pro Max</p>
+                  </div>
+                  <div class="repair_options_input_box">
+                      <input
+                          class="repair_options_input"
+                          type="text"
+                          name="name"
+                          placeholder="Twoje Imię" />
+                  </div>
+                  <div class="repair_options_input_block">
+                      <img
+                          class="repair_options_input_icon"
+                          src="./image/flag.svg"
+                          alt="poland flag" />
+                      <input
+                          class="repair_options_input_county"
+                          type="tel"
+                          name="countryCode"
+                          value="+48"
+                          disabled />
+                      <input
+                          class="repair_options_input_tel"
+                          type="tel"
+                          name="phone"
+                          placeholder="786 000 000" />
+                  </div>
+                  <div class="repair_options_input_box">
+                      <p class="repair_options_box_text">
+                          Klikając 'Wyślij' akceptujesz nasz
+                          <span>Regulamin i Politykę Prywatności</span>
+                      </p>
+                  </div>
+                  <div class="repair_options_input_box">
+                      <button class="repair_options_btn" type="submit">wyślj</button>
+                  </div>
+              </div>
+          </form>
           </div>
         </div>
       </section>
