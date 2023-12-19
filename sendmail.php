@@ -27,12 +27,12 @@ try {
     $mail->SMTPAuth = true;
 
     // Налаштування вашої пошти
-    $mail->Host = 'smtp.ukr.net'; // SMTP сервер вашої пошти
-    $mail->Username = 'ros_kichuk@ukr.net'; // Логін на пошті
-    $mail->Password = 'yFs1TF9IcF897CtW'; // Пароль на пошті
-    $mail->SMTPSecure = 'ssl';
-    $mail->Port = 465;
-    $mail->setFrom('ros_kichuk@ukr.net', 'Рос'); // Адреса вашої пошти і ім'я відправника
+    $mail->Host = 'smtp.gmail.com'; // SMTP сервер вашої пошти
+    $mail->Username = 'nexuslab2000@gmail.com'; // Логін на пошті
+    $mail->Password = 'pwxm rnpp ujpw cmux'; // Пароль на пошті pwxm rnpp ujpw cmux
+    $mail->SMTPSecure = 'tls';
+    $mail->Port = 587;
+    $mail->setFrom('nexuslab2000@gmail.com', 'Nexus'); // Адреса вашої пошти і ім'я відправника
 
     // Отримувач листа
     $mail->addAddress('sashakushnir4991@gmail.com');
