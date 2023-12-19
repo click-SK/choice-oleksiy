@@ -732,7 +732,7 @@
                 <button class="repair_options_btn" type="button">wyślj</button>
               </div>
             </div> -->
-            <form action="sendmail.php" method="post">
+            <form enctype="multipart/form-data" id="form" onsubmit="send(event, 'sendmail.php')" method="post">
               <div class="repair_options_input_wrapp">
                   <div class="repair_options_input_box">
                       <input

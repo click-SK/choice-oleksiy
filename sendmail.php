@@ -1,40 +1,59 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Очищення та перевірка даних
-    $deviceType = strip_tags(trim($_POST["deviceType"]));
-    $model = strip_tags(trim($_POST["model"]));
-    $name = strip_tags(trim($_POST["name"]));
-    $phone = strip_tags(trim($_POST["phone"]));
+require 'phpmailer/PHPMailer.php';
+require 'phpmailer/SMTP.php';
+require 'phpmailer/Exception.php';
 
-    // Перевірка, що поля не порожні
-    if (empty($deviceType) || empty($model) || empty($name) || empty($phone)) {
-        echo "Усі поля повинні бути заповнені!";
-        exit;
-    }
+// Отримання даних з форми
+$name = $_POST['name'];
+$deviceType = $_POST['deviceType'];
+$model = $_POST['model'];
+$phone = $_POST['phone'];
 
-    // Ваша електронна адреса
-    $recipient = "sashakushnir4991@gmail.com";
+// Формування самого листа
+$title = "Новий запит на ремонт";
+$body = "
+<h2>Новий запит на ремонт</h2>
+<b>Ім'я:</b> $name<br>
+<b>Тип пристрою:</b> $deviceType<br>
+<b>Модель:</b> $model<br>
+<b>Телефон:</b> $phone<br>
+";
 
-    // Тема листа
-    $subject = "Новий запит на ремонт від $name";
+// Налаштування PHPMailer
+$mail = new PHPMailer\PHPMailer\PHPMailer();
+try {
+    $mail->isSMTP();   
+    $mail->CharSet = "UTF-8";
+    $mail->SMTPAuth = true;
 
-    // Вміст листа
-    $email_content = "Тип пристрою: $deviceType\n";
-    $email_content .= "Модель: $model\n";
-    $email_content .= "Ім'я: $name\n";
-    $email_content .= "Телефон: $phone\n";
+    // Налаштування вашої пошти
+    $mail->Host = 'smtp.ukr.net'; // SMTP сервер вашої пошти
+    $mail->Username = 'ros_kichuk@ukr.net'; // Логін на пошті
+    $mail->Password = 'yFs1TF9IcF897CtW'; // Пароль на пошті
+    $mail->SMTPSecure = 'ssl';
+    $mail->Port = 465;
+    $mail->setFrom('ros_kichuk@ukr.net', 'Рос'); // Адреса вашої пошти і ім'я відправника
 
-    // Заголовки листа
-    $email_headers = "From: $name <$recipient>";
+    // Отримувач листа
+    $mail->addAddress('sashakushnir4991@gmail.com');
+    // $mail->addAddress(''); // Ще один, якщо потрібно
 
-    // Відправлення листа
-    if (mail($recipient, $subject, $email_content, $email_headers)) {
-        echo "Дякуємо! Ваш запит було надіслано.";
+    // Відправлення повідомлення
+    $mail->isHTML(true);
+    $mail->Subject = $title;
+    $mail->Body = $body;    
+
+    // Перевірка відправлення повідомлення
+    if ($mail->send()) {
+        $result = "success";
     } else {
-        echo "На жаль, не вдалося відправити запит.";
+        $result = "error";
     }
-} else {
-    // Не POST-запит
-    echo "Щось пішло не так.";
+} catch (Exception $e) {
+    $result = "error";
+    $status = "Повідомлення не було відправлено. Причина помилки: {$mail->ErrorInfo}";
 }
+
+// Виведення результату
+echo json_encode(["result" => $result, "status" => $status]);
 ?>
