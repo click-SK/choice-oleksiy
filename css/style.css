@@ -154,7 +154,7 @@ body {
   color: var(--BLACK, #101010);
   text-align: center;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 110%; /* 19.8px */
 }
 
@@ -755,7 +755,9 @@ body {
 
 .availability_service_text {
   margin-bottom: 77px;
-  color: var(--BLACK, #101010);
+  /* color: var(--BLACK, #101010); */
+  /* color: rgba(16, 16, 16, 0.1); */
+  transition: color 0.3s;
   text-align: center;
   font-size: 32px;
   font-weight: 500;
@@ -765,6 +767,20 @@ body {
   @media (max-width: 480px) {
     font-size: 24px;
   }
+}
+
+/* .active_text {
+  color: var(--BLACK, #101010); 
+} */
+
+.char {
+  display: inline-block;
+  color: rgba(16, 16, 16, 0.1);
+  transition: color 0.00001s ease-in-out;
+}
+
+.char.active_text {
+  color: var(--BLACK, #101010);
 }
 
 .availability_service_text span {
@@ -880,17 +896,28 @@ body {
   }
 }
 
-.repair_options_item:hover {
+.active{
   border: 2px solid var(--GREEN, #53c855);
+  /* fill: var(--GREEN, #53c855); */
+}
+
+
+.repair_options_item:hover {
+  /* border: 2px solid var(--GREEN, #53c8553f); */
 }
 
 .repair_options_item:hover svg {
-  fill: var(--GREEN, #53c855);
+  /* fill: var(--GREEN, #53c855); */
 }
+
 
 .repair_options_item svg {
   fill: currentColor;
   margin-bottom: 16px;
+}
+
+.active svg{
+  fill: var(--GREEN, #53c855);
 }
 
 .repair_options_text {
