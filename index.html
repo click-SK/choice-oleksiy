@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/swiper.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -70,7 +70,7 @@
               </li>
             </ul>
             <h1 class="hero_title">
-              Ekspresowa naprawa urządzeń apple w ciągu 1 godziny z gwarancją do
+              Ekspresowa naprawa urządzeń apple w ciągu 1* godziny z gwarancją do
               24 miesięcy
             </h1>
             <p class="hero_description">
@@ -78,26 +78,20 @@
               koszt o 25%. Zarezerwuj czas już dziś, aby uzyskać 5% zniżki na
               całość prac serwisowych.
             </p>
+            
             <div class="hero_tel_wrapp">
-              <div class="hero_tel_input_wrapp">
-                <img
-                  class="hero_tel_input_icon"
-                  src="./image/flag.svg"
-                  alt="poland flag"
-                />
-                <input
-                  class="hero_tel_county_input"
-                  type="tel"
-                  value="+48"
-                  disabled
-                />
-                <input class="hero_tel_input" type="tel" value="786 000 000" />
-              </div>
-
-              <button class="hero_tel_btn" type="button">
-                Zamówić i otrzymać rabat 5%
-              </button>
+              <form id="phoneForm">
+                <div class="hero_tel_input_wrapp">
+                  <img class="hero_tel_input_icon" src="./image/flag.svg" alt="poland flag" />
+                  <input class="hero_tel_county_input" type="tel" name="countryCode" value="+48" disabled />
+                  <input class="hero_tel_input" type="tel" name="phone" placeholder="786 000 000" required />
+                </div>
+                <button class="hero_tel_btn" type="submit">
+                  Zamówić i otrzymać rabat 5%
+                </button>
+              </form>
             </div>
+            
             <div class="hero_swiper_wrapp">
               <div class="swiper-hero">
                 <div class="swiper-wrapper">
@@ -531,7 +525,7 @@
             </div>
           </div>
           <div class="availability_service_wrapp">
-            <h2 class="availability_service_text">
+            <!-- <h2 class="availability_service_text">
               Bądź pewny, że uda nam się znaleźć sposób na rozwiązanie problemu
               z twoim urządzeniem, który cię usatysfakcjonuje. Naszym celem
               jest,
@@ -540,6 +534,13 @@
                 stosujemy zasadę „Wystarczy jednego spotkaniea” i wykonujemy
                 naszą pracę tak, abyś nie musiał do nas ponownie wracać.</span
               >
+            </h2> -->
+            <h2 class="availability_service_text" id="animatedText">
+              Bądź pewny, że uda nam się znaleźć sposób na rozwiązanie problemu
+              z twoim urządzeniem, który cię usatysfakcjonuje. Naszym celem
+              jest, aby twoje urządzenia cieszyły cię jak najdłużej, dlatego
+              stosujemy zasadę „Wystarczy jednego spotkaniea” i wykonujemy
+              naszą pracę tak, abyś nie musiał do nas ponownie wracać.
             </h2>
             <img
               class="availability_service_fox"
@@ -582,7 +583,7 @@
           <h2 class="repair_options_title">Wybierz opcje naprawy</h2>
           <div class="repair_options_wrapp">
             <ul class="repair_options_list">
-              <li class="repair_options_item">
+              <li class="repair_options_item" id="option1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="32"
@@ -603,7 +604,7 @@
                   1 godziny dzięki dostępnemu asortymentowi części zamiennych
                 </p>
               </li>
-              <li class="repair_options_item">
+              <li class="repair_options_item" id="option2">
                 <svg
                   width="32"
                   height="32"
@@ -649,7 +650,7 @@
                   1 godziny dzięki dostępnemu asortymentowi części zamiennych
                 </p>
               </li>
-              <li class="repair_options_item">
+              <li class='repair_options_item' id="option3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="32"
@@ -771,32 +772,6 @@
     </footer>
     <script src="./js/swiper.js"></script>
     <script src="./js/main.js"></script>
-    <script>
-      function send(event, url) {
-       event.preventDefault(); // Запобігаємо звичайному відправленню форми
-
-          var form = event.target; // Форма, яка відправляється
-          var formData = new FormData(form); // Використання FormData для збору даних форми
-
-          var xhr = new XMLHttpRequest(); // Створення нового запиту
-          xhr.open("POST", url, true); // Відкриваємо запит з методом POST на вказаний URL
-
-          // Налаштування обробника події для відповіді сервера
-          xhr.onreadystatechange = function() {
-              if (xhr.readyState === 4) { // Перевірка, що запит завершено
-                  var response = JSON.parse(xhr.responseText);
-                  if (xhr.status === 200) { // Перевірка статусу відповіді
-                      console.log('Відправлено успішно: ', response);
-                      // Тут можна додати логіку для обробки успішної відправки
-                  } else {
-                      console.error('Помилка відправки: ', response);
-                      // Тут можна додати логіку для обробки помилки відправки
-                  }
-              }
-          };
-
-          xhr.send(formData); // Відправлення форми
-      }
-    </script>
+    <script src="/js/script.js"></script>
   </body>
 </html>

@@ -30,7 +30,7 @@ try {
     $mail->Host = 'smtp.gmail.com'; // SMTP сервер вашої пошти
     $mail->Username = 'nexuslab2000@gmail.com'; // Логін на пошті
     $mail->Password = 'pwxm rnpp ujpw cmux'; // Пароль на пошті pwxm rnpp ujpw cmux
-    $mail->SMTPSecure = 'tls';
+    $mail->SMTPSecure = 'tls'; //Gmail SMTP port (TLS): 587.  Gmail SMTP port (SSL): 465.
     $mail->Port = 587;
     $mail->setFrom('nexuslab2000@gmail.com', 'Nexus'); // Адреса вашої пошти і ім'я відправника
 
