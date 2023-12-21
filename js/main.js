@@ -70,9 +70,8 @@ function showNumber() {
 
   btnTel.addEventListener("click", function () {
     if (headerTel.textContent === "***") {
-      headerTel.textContent = "000";
-    } else {
-      headerTel.textContent = "***";
+      headerTel.textContent = "000000";
+      btnTel.style = "display: none";
     }
   });
 }
@@ -95,7 +94,7 @@ function selectProductScroll(selector) {
     1
   );
 
-  const contactSection = document.querySelector("#contacts");
+  const contactSection = document.querySelector("#productForm");
 
   products.forEach((product) =>
     product.addEventListener("click", () => {
@@ -111,6 +110,19 @@ function selectProductScroll(selector) {
   );
 }
 
+function showChatLinks() {
+  const btn = document.querySelector(".chat_links_btn");
+  const chatList = document.querySelector(".chat_links_list");
+
+  btn.addEventListener("click", () => {
+    if (chatList.style.display === "flex") {
+      chatList.style.display = "none";
+    } else {
+      chatList.style.display = "flex";
+    }
+  });
+}
+
 swiper();
 swiperHero();
 scrollEvents();
@@ -119,3 +131,4 @@ scroolToContact(".popular_services_request_btn");
 scroolToContact(".availability_service_repair_box_left_text");
 scroolToContact(".availability_service_repair_box_right_text");
 selectProductScroll(".popular_services_table_row");
+showChatLinks();
