@@ -77,17 +77,49 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// document.addEventListener("DOMContentLoaded", function () {
+//   var textElement = document.getElementById("animatedText");
+//   var text = textElement.innerText;
+//   textElement.innerHTML = "";
+
+//   // Розділяємо текст на символи та обгортаємо кожен у спан
+//   text.split("").forEach(function (char, index) {
+//     var span = document.createElement("span");
+//     span.classList.add("char");
+//     span.innerText = char;
+//     span.style.transitionDelay = `${index * 50}ms`; // Затримка для кожного символу
+//     textElement.appendChild(span);
+//   });
+
+//   window.addEventListener("scroll", function () {
+//     document.querySelectorAll(".char").forEach(function (char) {
+//       var position = char.getBoundingClientRect();
+//       if (position.top < window.innerHeight && position.bottom >= 0) {
+//         char.classList.add("active_text");
+//       } else {
+//         char.classList.remove("active_text");
+//       }
+//     });
+//   });
+// });
+
 document.addEventListener("DOMContentLoaded", function () {
   var textElement = document.getElementById("animatedText");
   var text = textElement.innerText;
   textElement.innerHTML = "";
 
-  // Розділяємо текст на символи та обгортаємо кожен у спан
   text.split("").forEach(function (char, index) {
     var span = document.createElement("span");
-    span.classList.add("char");
+    
+    // Якщо символ є пробілом, додаємо до нього спеціальний клас
+    if (char === ' ') {
+      span.classList.add("space");
+    } else {
+      span.classList.add("char");
+      span.style.transitionDelay = `${index * 50}ms`;
+    }
+
     span.innerText = char;
-    span.style.transitionDelay = `${index * 50}ms`; // Затримка для кожного символу
     textElement.appendChild(span);
   });
 
@@ -102,6 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
 
 function inputValidation(selector) {
   const input = document.querySelector(selector);
@@ -119,3 +152,13 @@ function inputValidation(selector) {
 
 inputValidation(".repair_options_input_tel");
 inputValidation(".hero_tel_input");
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  setTimeout(function() {
+    var element = document.querySelector('.svg_logo_header .toggler');
+    if(element) {
+      element.classList.add('animate');
+    }
+  }, 1000); // 1000 мілісекунд = 1 секунда
+});
