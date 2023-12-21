@@ -1,15 +1,3 @@
-/**
- * Swiper 7.3.1
- * Most modern mobile touch slider and framework with hardware accelerated transitions
- * https://swiperjs.com
- *
- * Copyright 2014-2021 Vladimir Kharlampidi
- *
- * Released under the MIT License
- *
- * Released on: November 24, 2021
- */
-
 !(function (e, t) {
   "object" == typeof exports && "undefined" != typeof module
     ? (module.exports = t())
@@ -3170,12 +3158,10 @@
   }
   function U(e, t) {
     return e.transformEl
-      ? t
-          .find(e.transformEl)
-          .css({
-            "backface-visibility": "hidden",
-            "-webkit-backface-visibility": "hidden",
-          })
+      ? t.find(e.transformEl).css({
+          "backface-visibility": "hidden",
+          "-webkit-backface-visibility": "hidden",
+        })
       : t;
   }
   function K({ swiper: e, duration: t, transformEl: s, allSlides: a }) {
@@ -6800,4 +6786,3 @@
   ];
   return H.use(J), H;
 });
-//# sourceMappingURL=swiper-bundle.min.js.map
