@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -21,7 +21,7 @@
       <nav class="nav">
         <ul class="header_list">
           <li class="header_item">
-            <a class="header_link" href="#hero">Usługi & Cennik</a>
+            <a class="header_link" href="#prices">Usługi & Cennik</a>
           </li>
           <li class="header_item">
             <a class="header_link" href="#service">Serwis mobilny</a>
@@ -37,10 +37,15 @@
           </li>
         </ul>
       </nav>
-      <a class="header_tel" href="#">+48 514 ***<span>pokaż numer</span></a>
+      <div class="header_tel_wrapp">
+        <a class="header_tel" href="tel:+48514000"
+          >+48 514 <span class="header_tel_span">***</span></a
+        >
+        <button class="header_tel_btn" type="button">pokaż numer</button>
+      </div>
     </header>
     <main>
-      <section id="hero" class="section_hero">
+      <section id="service" class="section_hero">
         <div class="container">
           <div class="hero_wrapp">
             <p class="hero_schedule">
@@ -70,28 +75,42 @@
               </li>
             </ul>
             <h1 class="hero_title">
-              Ekspresowa naprawa urządzeń apple w ciągu 1* godziny z gwarancją do
-              24 miesięcy
+              Ekspresowa naprawa urządzeń apple w ciągu 1* godziny z gwarancją
+              do 24 miesięcy
             </h1>
             <p class="hero_description">
               Jeśli nie zakończymy naprawę w ustalonym terminie, obniżymy jej
               koszt o 25%. Zarezerwuj czas już dziś, aby uzyskać 5% zniżki na
               całość prac serwisowych.
             </p>
-            
-            <div class="hero_tel_wrapp">
-              <form id="phoneForm">
-                <div class="hero_tel_input_wrapp">
-                  <img class="hero_tel_input_icon" src="./image/flag.svg" alt="poland flag" />
-                  <input class="hero_tel_county_input" type="tel" name="countryCode" value="+48" disabled />
-                  <input class="hero_tel_input" type="tel" name="phone" placeholder="786 000 000" required />
-                </div>
-                <button class="hero_tel_btn" type="submit">
-                  Zamówić i otrzymać rabat 5%
-                </button>
-              </form>
-            </div>
-            
+
+            <form class="hero_form" id="phoneForm">
+              <div class="hero_tel_input_wrapp">
+                <img
+                  class="hero_tel_input_icon"
+                  src="./image/flag.svg"
+                  alt="poland flag"
+                />
+                <input
+                  class="hero_tel_county_input"
+                  type="tel"
+                  name="countryCode"
+                  value="+48"
+                  disabled
+                />
+                <input
+                  class="hero_tel_input"
+                  type="tel"
+                  name="phone"
+                  placeholder="786 000 000"
+                  required
+                />
+              </div>
+              <button class="hero_tel_btn" type="submit">
+                Zamówić i otrzymać rabat 5%
+              </button>
+            </form>
+
             <div class="hero_swiper_wrapp">
               <div class="swiper-hero">
                 <div class="swiper-wrapper">
@@ -127,15 +146,17 @@
           </div>
         </div>
       </section>
-      <section id="service" class="section_apple_service">
+      <section id="about" class="section_apple_service">
         <div class="container">
-          <p class="apple_service_description">
-            Twój Choice – przyjazny i profesjonalny serwis Apple w Warszawie.
-            <span>
+          <div class="apple_service_description_wrapp">
+            <p class="apple_service_description">
+              Twój Choice – przyjazny i profesjonalny serwis Apple w Warszawie.
+            </p>
+            <p class="apple_service_description_green">
               Autentyczne recenzje od prawdziwych ludzi. Każde słowo wyżej
-              potwierdzono przez naszych Klientów.</span
-            >
-          </p>
+              potwierdzono przez naszych Klientów.
+            </p>
+          </div>
           <div class="apple_service_google_wrapp">
             <a class="apple_service_google_link" href="#">
               <img src="./image/google.svg" alt="google" />
@@ -153,162 +174,27 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="apple_service_slider_card">
-                    <div class="apple_service_slider_card_wrapp">
-                      <div class="apple_service_slider_card_circle">B</div>
-                      <div class="apple_service_slider_card_box">
-                        <p class="apple_service_slider_card_name">
-                          Barbara Pawlowska
-                        </p>
-                        <p class="apple_service_slider_card_text">32 отзыва</p>
-                      </div>
-                    </div>
-                    <div class="apple_service_slider_card_block">
-                      <div class="apple_service_slider_card_icon">
-                        <img src="./image//star.svg" alt="star" />
-                        <img src="./image//star.svg" alt="star" />
-                        <img src="./image//star.svg" alt="star" />
-                        <img src="./image//star.svg" alt="star" />
-                        <img src="./image//star.svg" alt="star" />
-                      </div>
-                      <p class="apple_service_slider_card_text">Вчера</p>
-                      <p class="apple_service_slider_card_item">Новый</p>
-                    </div>
-                    <p class="apple_service_slider_card_reviews">
-                      Bardzo miło, sprawnie i profesjonalnie. Polecam serdecznie
-                    </p>
+                    <img src="/image/slide1.png" alt="reviews" />
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="apple_service_slider_card">
-                    <div class="apple_service_slider_card_wrapp">
-                      <div class="apple_service_slider_card_circle">P</div>
-                      <div class="apple_service_slider_card_box">
-                        <p class="apple_service_slider_card_name">Piotr N</p>
-                        <p class="apple_service_slider_card_text">
-                          Местный эксперт 73 отзыва 1 фото
-                        </p>
-                      </div>
-                    </div>
-                    <div class="apple_service_slider_card_block">
-                      <div class="apple_service_slider_card_icon">
-                        <img src="./image//star.svg" alt="star" />
-                        <img src="./image//star.svg" alt="star" />
-                        <img src="./image//star.svg" alt="star" />
-                        <img src="./image//star.svg" alt="star" />
-                        <img src="./image//star.svg" alt="star" />
-                      </div>
-                      <p class="apple_service_slider_card_text">Неделю назад</p>
-                      <p class="apple_service_slider_card_item">Новый</p>
-                    </div>
-                    <p class="apple_service_slider_card_reviews">
-                      Super serwis. Nie było szybko, ale mega skutecznie
-                      iphone12 pro miał zwarcie, inny serwis kombinował a tutaj
-                      pico bello, namierzenie usterki było skomplikowane ale
-                      naprawa wykonana bardzo skutecznie ok m-c temu iphonik
-                      śmiga jak należy.
-                    </p>
+                    <img src="/image/slide2.png" alt="reviews" />
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="apple_service_slider_card">
-                    <div class="apple_service_slider_card_wrapp">
-                      <div class="apple_service_slider_card_circle">K</div>
-                      <div class="apple_service_slider_card_box">
-                        <p class="apple_service_slider_card_name">
-                          Карина Клечковская
-                        </p>
-                        <p class="apple_service_slider_card_text">1 отзыв</p>
-                      </div>
-                    </div>
-                    <div class="apple_service_slider_card_block">
-                      <div class="apple_service_slider_card_icon">
-                        <img src="./image//star.svg" alt="star" />
-                        <img src="./image//star.svg" alt="star" />
-                        <img src="./image//star.svg" alt="star" />
-                        <img src="./image//star.svg" alt="star" />
-                        <img src="./image//star.svg" alt="star" />
-                      </div>
-                      <p class="apple_service_slider_card_text">Неделю назад</p>
-                      <p class="apple_service_slider_card_item">Новый</p>
-                    </div>
-                    <p class="apple_service_slider_card_reviews">
-                      Очень быстрый и профессиональный сервис, самые низкие
-                      рекомендации. Меняла экран на телефоне - все сделано очень
-                      качественно , невероятно быстро и по очень приятной цене .
-                      А ещё , что немаловажно , была предоставлена гарантия . Я
-                      рекомендую это место людям , которые ищут место с
-                      компетентными специалистами и вежливым персоналом (очень
-                      приятная и дружелюбная девушка - администратор ). Просто
-                      10 из 10
-                    </p>
+                    <img src="/image/slide3.png" alt="reviews" />
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="apple_service_slider_card">
-                    <div class="apple_service_slider_card_wrapp">
-                      <div class="apple_service_slider_card_circle">R</div>
-                      <div class="apple_service_slider_card_box">
-                        <p class="apple_service_slider_card_name">
-                          Rafał Gałązka
-                        </p>
-                        <p class="apple_service_slider_card_text">
-                          Местный эксперт 12 отзывов 10 фото
-                        </p>
-                      </div>
-                    </div>
-                    <div class="apple_service_slider_card_block">
-                      <div class="apple_service_slider_card_icon">
-                        <img src="./image//star.svg" alt="star" />
-                        <img src="./image//star.svg" alt="star" />
-                        <img src="./image//star.svg" alt="star" />
-                        <img src="./image//star.svg" alt="star" />
-                        <img src="./image//star.svg" alt="star" />
-                      </div>
-                      <p class="apple_service_slider_card_text">
-                        2 месяца назад
-                      </p>
-                    </div>
-                    <p class="apple_service_slider_card_reviews">
-                      Bardzo miła obsługa szybka i profesjonalna robota polecam
-                    </p>
+                    <img src="/image/slide4.png" alt="reviews" />
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="apple_service_slider_card">
-                    <div class="apple_service_slider_card_wrapp">
-                      <div class="apple_service_slider_card_circle">L</div>
-                      <div class="apple_service_slider_card_box">
-                        <p class="apple_service_slider_card_name">
-                          Leonid Lavrus
-                        </p>
-                        <p class="apple_service_slider_card_text">
-                          Местный эксперт 50 отзывов 129 фото
-                        </p>
-                      </div>
-                    </div>
-                    <div class="apple_service_slider_card_block">
-                      <div class="apple_service_slider_card_icon">
-                        <img src="./image//star.svg" alt="star" />
-                        <img src="./image//star.svg" alt="star" />
-                        <img src="./image//star.svg" alt="star" />
-                        <img src="./image//star.svg" alt="star" />
-                        <img src="./image//star.svg" alt="star" />
-                      </div>
-                      <p class="apple_service_slider_card_text">Месяц назад</p>
-                    </div>
-                    <p class="apple_service_slider_card_reviews">
-                      Звертався з легким ремонтом, переплавка і поклей макбук.
-                      Молодий негативний відгук і швидкий сервіс, запропонував
-                      фото всередині перед початком ремонту. За'ясувалася цінка,
-                      скинули фото і запропонували продовжити. Через 3 години
-                      ноутбук був готовий. Згодом виявилася деятий дюймов не
-                      робочим певно абия з транспортної після заміни дисплея в
-                      майстерню поряд. Пояснили, що трогати зробити не можуть
-                      через виробництва деталей якщо отримаю телефон абия
-                      спрацюється. За 3 рядкове описання, а переказ бачив
-                      завдання ремонт робить швидко, тихо середно.. Складаний
-                      ремонт роблять самі. Дуже дякую! Рекомендую!
-                    </p>
+                    <img src="/image/slide5.png" alt="reviews" />
                   </div>
                 </div>
               </div>
@@ -317,40 +203,67 @@
         </div>
         <p class="apple_service_client_text">Ponad 20000 Klientów za 5 lat</p>
       </section>
-      <section id="about" class="section_popular_services">
+      <section id="prices" class="section_popular_services">
         <div class="container">
           <h2 class="popular_services_title">Popularne usługi</h2>
+
           <div class="popular_services_table">
-            <div class="popular_services_table_column">
-              <div class="popular_services_table_row">
-                <p class="popular_services_table_title">Вид услуги</p>
-              </div>
-              <div class="popular_services_table_row">
-                <img src="./image/services-table-icon1.svg" alt="szybki " />
+            <div class="popular_services_table_row">
+              <p class="popular_services_table_title">Вид услуги</p>
+              <p class="popular_services_table_title">Цена</p>
+              <p class="popular_services_table_title">Время изготовления</p>
+            </div>
+            <div class="popular_services_table_row">
+              <div class="popular_services_table_wrapp_img">
+                <img src="./image/services-table-icon1.svg" alt="szybki" />
                 <p class="popular_services_table_type">
                   wymiana szybki wyświetlacza
                 </p>
               </div>
-              <div class="popular_services_table_row">
+              <p class="popular_services_table_price">
+                <span>от </span>120 PLN
+              </p>
+              <p class="popular_services_table_time">60 min</p>
+            </div>
+            <div class="popular_services_table_row">
+              <div class="popular_services_table_wrapp_img">
                 <img src="./image/services-table-icon2.svg" alt="matrycy" />
                 <p class="popular_services_table_type">
                   Wymiana matrycy (ekran)
                 </p>
               </div>
-              <div class="popular_services_table_row">
-                <img src="./image/services-table-icon3.svg" alt="baterii " />
+              <p class="popular_services_table_price">
+                <span>от </span>120 PLN
+              </p>
+              <p class="popular_services_table_time">20-40 min</p>
+            </div>
+            <div class="popular_services_table_row">
+              <div class="popular_services_table_wrapp_img">
+                <img src="./image/services-table-icon3.svg" alt="baterii" />
                 <p class="popular_services_table_type">wymiana baterii</p>
               </div>
-              <div class="popular_services_table_row">
+              <p class="popular_services_table_price">
+                <span>от </span>120 PLN
+              </p>
+              <p class="popular_services_table_time">30 min</p>
+            </div>
+            <div class="popular_services_table_row">
+              <div class="popular_services_table_wrapp_img">
                 <img
                   src="./image/services-table-icon4.svg"
-                  alt="tylnego panelu "
+                  alt="tylnego panelu"
                 />
                 <p class="popular_services_table_type">
                   wymiana tylnego panelu
                 </p>
               </div>
-              <div class="popular_services_table_row">
+              <p class="popular_services_table_price">
+                <span>от </span>120 PLN
+              </p>
+              <p class="popular_services_table_time">30-40 min</p>
+            </div>
+            <div class="popular_services_table_row">
+              <div class="popular_services_table_wrapp_img">
                 <img
                   src="./image/services-table-icon5.svg"
                   alt="złącza ładowania"
@@ -359,7 +272,13 @@
                   wymiana złącza ładowania
                 </p>
               </div>
-              <div class="popular_services_table_row">
+              <p class="popular_services_table_price">
+                <span>от </span>120 PLN
+              </p>
+              <p class="popular_services_table_time">60 min</p>
+            </div>
+            <div class="popular_services_table_row">
+              <div class="popular_services_table_wrapp_img">
                 <img
                   src="./image/services-table-icon6.svg"
                   alt="błędu systemowego"
@@ -368,94 +287,36 @@
                   wyeliminowanie błędu systemowego
                 </p>
               </div>
-              <div class="popular_services_table_row">
+              <p class="popular_services_table_price">
+                <span>от </span>120 PLN
+              </p>
+              <p class="popular_services_table_time">60 min</p>
+            </div>
+            <div class="popular_services_table_row">
+              <div class="popular_services_table_wrapp_img">
                 <img
                   src="./image/services-table-icon7.svg"
-                  alt="naprawa po zalaniu "
+                  alt="naprawa po zalaniu"
                 />
                 <p class="popular_services_table_type">Naprawa po zalaniu</p>
               </div>
-              <div class="popular_services_table_row">
+              <p class="popular_services_table_price">
+                <span>от </span>120 PLN
+              </p>
+              <p class="popular_services_table_time">60 min</p>
+            </div>
+            <div class="popular_services_table_row">
+              <div class="popular_services_table_wrapp_img">
                 <img
                   src="./image/services-table-icon8.svg"
-                  alt=" naprawa płyty głównej "
+                  alt="naprawa płyty głównej"
                 />
                 <p class="popular_services_table_type">Naprawa płyty głównej</p>
               </div>
-            </div>
-            <div class="popular_services_table_column">
-              <div class="popular_services_table_row">
-                <p class="popular_services_table_title">Цена</p>
-              </div>
-              <div class="popular_services_table_row">
-                <p class="popular_services_table_price">
-                  <span>от </span>120 PLN
-                </p>
-              </div>
-              <div class="popular_services_table_row">
-                <p class="popular_services_table_price">
-                  <span>от </span>120 PLN
-                </p>
-              </div>
-              <div class="popular_services_table_row">
-                <p class="popular_services_table_price">
-                  <span>от </span>120 PLN
-                </p>
-              </div>
-              <div class="popular_services_table_row">
-                <p class="popular_services_table_price">
-                  <span>от </span>120 PLN
-                </p>
-              </div>
-              <div class="popular_services_table_row">
-                <p class="popular_services_table_price">
-                  <span>от </span>120 PLN
-                </p>
-              </div>
-              <div class="popular_services_table_row">
-                <p class="popular_services_table_price">
-                  <span>от </span>120 PLN
-                </p>
-              </div>
-              <div class="popular_services_table_row">
-                <p class="popular_services_table_price">
-                  <span>от </span>120 PLN
-                </p>
-              </div>
-              <div class="popular_services_table_row">
-                <p class="popular_services_table_price">
-                  <span>от </span>120 PLN
-                </p>
-              </div>
-            </div>
-            <div class="popular_services_table_column">
-              <div class="popular_services_table_row">
-                <p class="popular_services_table_title">Время изготовления</p>
-              </div>
-              <div class="popular_services_table_row">
-                <p class="popular_services_table_time">60 min</p>
-              </div>
-              <div class="popular_services_table_row">
-                <p class="popular_services_table_time">20-40 min</p>
-              </div>
-              <div class="popular_services_table_row">
-                <p class="popular_services_table_time">30 min</p>
-              </div>
-              <div class="popular_services_table_row">
-                <p class="popular_services_table_time">30-40 min</p>
-              </div>
-              <div class="popular_services_table_row">
-                <p class="popular_services_table_time">60 min</p>
-              </div>
-              <div class="popular_services_table_row">
-                <p class="popular_services_table_time">60 min</p>
-              </div>
-              <div class="popular_services_table_row">
-                <p class="popular_services_table_time">60 min</p>
-              </div>
-              <div class="popular_services_table_row">
-                <p class="popular_services_table_time">1 den</p>
-              </div>
+              <p class="popular_services_table_price">
+                <span>от </span>120 PLN
+              </p>
+              <p class="popular_services_table_time">1 den</p>
             </div>
           </div>
 
@@ -469,9 +330,12 @@
               Wyślij zgłoszenie a nasz menadżer przedstawi dokładną cenę i czas
               naprawy w ciągu 15 minut.
             </p>
-            <p class="popular_services_request_additional">
-              P.S.: A dodatkowo przyzna Ci<span>5% rabatu</span>
-            </p>
+            <div class="popular_services_request_additional_wrapp">
+              <p class="popular_services_request_additional">
+                P.S.: A dodatkowo przyzna Ci
+              </p>
+              <p class="popular_services_request_additional_green">5% rabatu</p>
+            </div>
             <button class="popular_services_request_btn" type="button">
               Wysłać zgłoszenie i otrzymać 5% rabatu
             </button>
@@ -539,8 +403,8 @@
               Bądź pewny, że uda nam się znaleźć sposób na rozwiązanie problemu
               z twoim urządzeniem, który cię usatysfakcjonuje. Naszym celem
               jest, aby twoje urządzenia cieszyły cię jak najdłużej, dlatego
-              stosujemy zasadę „Wystarczy jednego spotkaniea” i wykonujemy
-              naszą pracę tak, abyś nie musiał do nas ponownie wracać.
+              stosujemy zasadę „Wystarczy jednego spotkaniea” i wykonujemy naszą
+              pracę tak, abyś nie musiał do nas ponownie wracać.
             </h2>
             <img
               class="availability_service_fox"
@@ -650,7 +514,7 @@
                   1 godziny dzięki dostępnemu asortymentowi części zamiennych
                 </p>
               </li>
-              <li class='repair_options_item' id="option3">
+              <li class="repair_options_item" id="option3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="32"
@@ -683,59 +547,79 @@
                 </p>
               </li>
             </ul>
-            <form enctype="multipart/form-data" id="form" onsubmit="send(event, 'sendmail.php')" method="post">
+            <form
+              enctype="multipart/form-data"
+              id="form"
+              onsubmit="send(event, 'sendmail.php')"
+              method="post"
+            >
               <div class="repair_options_input_wrapp">
-                  <div class="repair_options_input_box">
-                      <input
-                          class="repair_options_input"
-                          type="text"
-                          name="deviceType"
-                          placeholder="Rodzaj urządzenia" />
-                      <p class="repair_options_input_text">Przykład: iPhone</p>
+                <div class="repair_options_input_box">
+                  <input
+                    class="repair_options_input"
+                    type="text"
+                    name="deviceType"
+                    placeholder="Rodzaj urządzenia"
+                  />
+                  <p class="repair_options_input_text">Przykład: iPhone</p>
+                </div>
+                <div class="repair_options_input_box">
+                  <input
+                    class="repair_options_input"
+                    type="text"
+                    name="model"
+                    placeholder="Model"
+                  />
+                  <p class="repair_options_input_text">
+                    Przykład: iPhone 13 Pro Max
+                  </p>
+                </div>
+                <div class="repair_options_input_box">
+                  <input
+                    class="repair_options_input"
+                    type="text"
+                    name="name"
+                    placeholder="Twoje Imię"
+                  />
+                </div>
+                <div class="repair_options_input_block">
+                  <img
+                    class="repair_options_input_icon"
+                    src="./image/flag.svg"
+                    alt="poland flag"
+                  />
+                  <input
+                    class="repair_options_input_county"
+                    type="tel"
+                    name="countryCode"
+                    value="+48"
+                    disabled
+                  />
+                  <input
+                    class="repair_options_input_tel"
+                    type="tel"
+                    name="phone"
+                    placeholder="786 000 000"
+                  />
+                </div>
+                <div class="repair_options_input_box">
+                  <div class="repair_options_box_wrapp">
+                    <p class="repair_options_box_text">
+                      Klikając 'Wyślij' akceptujesz 
+                    </p>
+                    <p class="repair_options_box_text_green">
+                      nasz <span>Regulamin i Politykę Prywatności</span>
+                    </p>
                   </div>
-                  <div class="repair_options_input_box">
-                      <input
-                          class="repair_options_input"
-                          type="text"
-                          name="model"
-                          placeholder="Model" />
-                      <p class="repair_options_input_text">Przykład: iPhone 13 Pro Max</p>
-                  </div>
-                  <div class="repair_options_input_box">
-                      <input
-                          class="repair_options_input"
-                          type="text"
-                          name="name"
-                          placeholder="Twoje Imię" />
-                  </div>
-                  <div class="repair_options_input_block">
-                      <img
-                          class="repair_options_input_icon"
-                          src="./image/flag.svg"
-                          alt="poland flag" />
-                      <input
-                          class="repair_options_input_county"
-                          type="tel"
-                          name="countryCode"
-                          value="+48"
-                          disabled />
-                      <input
-                          class="repair_options_input_tel"
-                          type="tel"
-                          name="phone"
-                          placeholder="786 000 000" />
-                  </div>
-                  <div class="repair_options_input_box">
-                      <p class="repair_options_box_text">
-                          Klikając 'Wyślij' akceptujesznasz
-                          <span>Regulamin i Politykę Prywatności</span>
-                      </p>
-                  </div>
-                  <div class="repair_options_input_box">
-                      <button class="repair_options_btn" type="submit">wyślj</button>
-                  </div>
+                </div>
+                <div class="repair_options_input_box">
+                  <button class="repair_options_btn" type="submit">
+                    wyślj
+                  </button>
+                </div>
               </div>
-          </form>
+            </form>
+            <p class="repair_options_lub">LUB</p>
           </div>
         </div>
       </section>
@@ -770,8 +654,8 @@
     <footer class="footer">
       <p class="footer_text">2023 © Choice.app - All rights reserved</p>
     </footer>
-    <script src="./js/swiper.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="/js/swiper.js"></script>
+    <script src="/js/main.js"></script>
     <script src="/js/script.js"></script>
   </body>
 </html>
