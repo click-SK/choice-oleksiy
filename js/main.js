@@ -99,7 +99,7 @@ function selectProductScroll(selector) {
 
   products.forEach((product) =>
     product.addEventListener("click", () => {
-      product.style.border = "2px solid green";
+      // product.style.border = "2px solid green";
       setTimeout(() => {
         window.scrollTo({
           top: contactSection.offsetTop,
