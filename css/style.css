@@ -53,15 +53,15 @@ body {
   }
 }
 
-.svg_logo_header{
+.svg_logo_header {
   height: auto;
   max-width: 104px;
 }
 
-.svg_logo_header .toggler{
+.svg_logo_header .toggler {
   fill: #fff;
   transform: translateX(-8%);
-  transition: all ease-out .6s;
+  transition: all ease-out 0.6s;
 }
 
 .svg_logo_header .toggler.animate {
@@ -237,6 +237,7 @@ body {
   text-transform: uppercase;
 }
 .hero_tel_input {
+  width: 100%;
   background: var(--GREY, #f4f4f4);
   color: #101010;
   font-size: 14px;
@@ -401,7 +402,7 @@ body {
   border-radius: 4px;
   /* border: 1px solid var(--GREY, #f4f4f4); */
   display: flex;
-  justify-content: center
+  justify-content: center;
 }
 
 .apple_service_slider_card_wrapp {
@@ -512,10 +513,15 @@ body {
   align-content: center;
   align-items: center;
   gap: 0 10px;
+  transition: all 200ms ease-in-out;
 }
 
 .popular_services_table_row:not(:first-child) {
   cursor: pointer;
+}
+
+.popular_services_table_row:not(:first-child):hover {
+  border-bottom: 2px solid #53c855;
 }
 
 .popular_services_table_row:not(:last-child) {
@@ -733,6 +739,7 @@ body {
   }
 }
 .availability_service_repair_box_left_desc {
+  max-width: 454px;
   color: var(--BLACK, #101010);
   font-size: 18px;
   font-weight: 500;
@@ -792,6 +799,7 @@ body {
   }
 }
 .availability_service_repair_box_right_desc {
+  max-width: 400px;
   color: #fff;
   font-size: 18px;
   font-weight: 500;
@@ -866,10 +874,11 @@ body {
 }
 
 .availability_service_fox {
-  margin-bottom: 160px;
+  margin-bottom: 80px;
 }
 
 .availability_service_title {
+  padding-top: 80px;
   margin-bottom: 20px;
   color: var(--BLACK, #101010);
   text-align: center;
@@ -926,6 +935,12 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 140%;
+}
+
+.availability_service_description_text br {
+  @media (max-width: 510px) {
+    display: none;
+  }
 }
 
 /* Repair options */
@@ -1078,6 +1093,7 @@ body {
   outline: none;
 }
 .repair_options_input_tel {
+  width: 100%;
   background: var(--GREY, #f4f4f4);
   color: #101010;
 
@@ -1109,7 +1125,7 @@ body {
   color: var(--GREY-4, #4a4a4a);
 }
 
-.repair_options_box_text_green span {
+.repair_options_box_text_green a {
   color: var(--GREEN, #53c855);
 }
 
@@ -1257,4 +1273,24 @@ body {
   font-size: 12px;
   font-weight: 700;
   line-height: 24px;
+}
+
+/* Chat links */
+.chat_links_wrapp {
+  position: fixed;
+  bottom: 20px;
+  left: 5px;
+  width: 150px;
+  display: flex;
+  gap: 0 20px;
+  align-items: flex-end;
+  z-index: 9999999;
+}
+.chat_links_btn {
+  background-color: transparent;
+}
+.chat_links_list {
+  display: none;
+  flex-direction: column;
+  gap: 8px 0;
 }
