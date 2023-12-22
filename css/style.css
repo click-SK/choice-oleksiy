@@ -1278,7 +1278,7 @@ body {
 /* Chat links */
 .chat_links_wrapp {
   position: fixed;
-  bottom: 10%;
+  bottom: 50px;
   right: 10%;
   /* width: 150px; */
   display: flex;
@@ -1294,5 +1294,5 @@ body {
   flex-direction: column;
   gap: 8px 0;
   position: fixed;
-  bottom: 20%;
+  bottom: 115px;
 }
