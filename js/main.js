@@ -77,12 +77,13 @@ function showNumber() {
 }
 
 function scroolToContact(selector) {
+  const headerHeight = document.querySelector(".header").offsetHeight;
   const btnCLick = document.querySelector(selector);
-  const contactSection = document.querySelector("#contacts");
+  const contactSection = document.querySelector("#productForm");
 
   btnCLick.addEventListener("click", () => {
     window.scrollTo({
-      top: contactSection.offsetTop,
+      top: contactSection.offsetTop - headerHeight,
       behavior: "smooth",
     });
   });
@@ -95,13 +96,14 @@ function selectProductScroll(selector) {
   );
 
   const contactSection = document.querySelector("#productForm");
+  const headerHeight = document.querySelector(".header").offsetHeight;
 
   products.forEach((product) =>
     product.addEventListener("click", () => {
       // product.style.border = "2px solid green";
       setTimeout(() => {
         window.scrollTo({
-          top: contactSection.offsetTop,
+          top: contactSection.offsetTop - headerHeight,
           behavior: "smooth",
         });
         product.style.border = "";
